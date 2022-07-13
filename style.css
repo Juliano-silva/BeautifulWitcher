@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+}
+body{
+    background: rgb(1, 1, 40);
+    color: white;
+}
+.Caixa{
+    border: 6px solid red;
+    border-radius: 50px;
+    width: 75%;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+    background: lightcoral;
+}
+#CaixaLado{
+    background: darkcyan;
+    position: fixed;
+    width: 12%;
+    margin-top: 15px;
+    border-radius: 20px;
+}
+#CaixaLado > a{
+    text-decoration: none;
+    color: lightyellow;
+    font-size: 34px;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+#Header > h1{
+    border: 1px solid transparent;
+    text-align: center;
+    background: red;
+}
+.Anúncio{
+    position: absolute;
+    border: 1px solid lightblue;
+    background: lightgreen;
+    width: 11%;
+    top: 0;
+    word-wrap: break-word;
+    left: 88.5%;
+    margin-top: 60px;
+    border-radius: 20px;
+}
