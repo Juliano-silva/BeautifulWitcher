@@ -8,10 +8,14 @@
     font-size: 40px;
 }
 body{
-    background-image: url(Arquivos/BK.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    position: relative;
+    background: linear-gradient(15deg,#0f1e29,#283d4d,#0c293f);
     color: white;
+    overflow-x: hidden;
+    z-index: 10;
+}
+body::-webkit-scrollbar{
+    width: 0;
 }
 .CaixaConteúdo{
     z-index: 10;
@@ -21,7 +25,6 @@ body{
     position: relative;
     margin: auto;
     width: 75%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,9 +37,9 @@ body{
     content: '';
     position: absolute;
     width: 250px;
-    height: 140%;
+    height: 150%;
     background: linear-gradient(#00ccff,rgb(221, 221, 44),rgb(44, 44, 162));
-    animation: animate 10s linear infinite;
+    animation: animate 5s linear infinite;
     border-radius: 50px;
 }
 .Caixa::after{
@@ -72,22 +75,60 @@ body{
     width: 100%;
     display: block;
 }
+#Header{
+    background: #1a2f3f;
+}
+#Header > img{
+    display: flex;
+    margin: auto;
+}
+#Header > h1 {
+    text-shadow: 1px 1px 5px whitesmoke;
+}
+#Header > h1 > span:nth-child(1){
+    color: #f8f8f8;
+    display: inline-block;
+    width: 5.3em;
+}
+#Header > h1 > span:nth-child(2){
+    color: rgb(13, 12, 12);
+    display: inline-block;
+    width: 5.8em;
+}
 #Header > h1{
     border: 1px solid transparent;
     text-align: center;
-    background: red;
+    font-family: 'Witcher';
+    width: 100%;
+    margin-top: -50px;
+    position: absolute;
 }
 .Anúncio{
-    position: absolute;
-    border: 1px solid lightblue;
-    background: lightgreen;
+    position: fixed;
+    border: 1px solid transparent;
+    background-image: url(Arquivos/Capa.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     width: 11%;
+    height: 18em;
     top: 0;
     word-wrap: break-word;
     margin-top: 60px;
-    margin-left: 1200px;
+    left: 88%;
     z-index: 4;
     border-radius: 20px;
+}
+.Anúncio > a{
+    margin-top: 330px;
+    text-shadow: 5px 1px 5px #1a2f3f;
+    font-family: 'Witcher';
+    color: #00ccff;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
 #mapa{
     border: 4px solid white; 
@@ -96,15 +137,24 @@ body{
     border-radius: 20px;
 }
 #Footer{
-    text-align: center;
-    margin-top: 100px;
-    background: blue;
-    color: black;
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+}
+#Footer > a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 45px;
 }
 .Personagens{
     display: inline-block;
     margin-left: 10%;
-
+}
+#Personagens > div > h1{
+    color: whitesmoke;
+    font-size: 60px;
+    margin-top: 40px;
+    font-family: 'Witcher';
 }
 .Personagens .card{
     position: relative;
@@ -116,7 +166,7 @@ body{
     justify-content: flex-start;
     align-items: center;
     border-radius: 50px;
-    margin-top: 40px;
+    margin-top: 45px;
     background: linear-gradient(130deg,#1a2f3f,#595759);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -168,12 +218,75 @@ body{
     margin: auto;
 }
 #História > h1{
-    color: red;
+    color: whitesmoke;
     font-family: 'Witcher';
 }
 #História > p{
     font-size: 35px;
+    border: 5px solid whitesmoke;
+    border-radius: 0px 20px 0px 20px;
+    background: #0f1e29;
     text-align: justify;
     color: #ecea9f;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#Trailer{
+    margin-top: 20px;
+    font-family: 'Witcher';
+}
+#Trailer > iframe{
+    width: 80%;
+    height: 16em;
+    border-radius: 50px;
+    border: 4px solid whitesmoke;
+}
+#Mapas{
+    font-family: 'Witcher';
+}
+#Mapas > img{
+    border: 1px solid transparent;
+    width: 85%;
+    height: 14em;
+    filter: blur(10px);
+}
+#Mapas > img:hover{
+    filter: blur(0px);
+}
+#DLCs > h1{
+    font-family: 'Witcher';
+    display: block;
+    margin: auto;
+}
+#DLCs > img{
+    width: 10em;
+    height: 8em;
+    display: table-cell;
+    float: left;
+    margin-left: 2%;
+    margin-top: 50px;
+    border: 4px solid rgb(23, 20, 20);
+    border-radius: 20px;
+}
+#DLCs > h2{
+    float: left;
+    color: red;
+    font-family: 'Witcher';
+    margin-top: 60px;
+    width: 14em;
+    text-align: left;
+}
+#DLCs > h2:nth-child(6){
+    color: rgb(0, 157, 255);
+}
+#DLCs > p{
+    width: 18em;
+    height: 7em;
+    overflow: auto;
+    margin-top: 20px;
+    margin-left: 2.2%;
+    color: whitesmoke;
+    border-radius: 20px;
+}
+#DLCs > p::-webkit-scrollbar{
+    width: 0;
 }
